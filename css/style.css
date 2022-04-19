@@ -140,7 +140,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 1.25rem;
 	color: white;
 	white-space: nowrap;
-	/* background: lime; */
 }
 .navbar .container .navbar-brand img {
 	margin-right: .5rem;
@@ -226,6 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 		transition: 0ms 200ms;
 		width: 200px;
 		top: 4.5rem;
+		padding: .5rem;
 		left: -50%;
 		border-radius: .5rem;
 	}
@@ -582,7 +582,6 @@ h1, h2, h3, h4, h5, h6 {
 		overflow: hidden;
 		padding: 0 2rem;
 		position: relative;
-		/* background-color: red; */
 }
 .p-Title {
 		display: flex;
@@ -726,7 +725,6 @@ h1, h2, h3, h4, h5, h6 {
 	.costom-card-type1 {
 		flex-direction: column;
 		width: clamp(28.125rem, 50vw, 18rem);
-		/* overflow: hidden; */
 		margin-top: 0;
 	}
 	.costom-card-type1 .thumbnail-card-type1 img {
@@ -834,10 +832,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .costom-card-type2 {
 		width: clamp(18rem, 90vw, 24rem);
-		/* max-height: 425px; */
 		position: relative;
 		border-radius: .5rem;
-		/* box-shadow: .5rem .5rem 1rem #0000002d; */
 }
 .thumbnail-card {
 	position: relative;
@@ -867,7 +863,6 @@ h1, h2, h3, h4, h5, h6 {
 		display: flex;
 		align-items: center;
 		overflow: hidden;
-		/* background-color: red; */
 }
 .header-card h4 a {
 		margin: 0;
