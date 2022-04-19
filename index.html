@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <script defer src="js/style.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Scroll To Top Button -->
+    <div class="stp-btn"> ▲ </div>
+
+    <!-- navbar - 1 -->
+    <nav class="navbar bg-costom style">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="icons/iconHeader.svg" alt="" width="40" height="34" class="d-inline-block align-text-top me-2">
+                ISTANA PRESIDEN
+            </a>
+            <div class="navbar-btn-toggle" role="button">
+                <input type="checkbox" class="btn-nt">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item costom">
+                        <a class="nav-link">
+                            Organisasi
+                            <span class="dd-icon"> ▿ </span>
+                        </a>
+                        <div class="navbar-itm-dropdown">
+                            <a href="" class="nid-itm"> Organisasi-1 </a>
+                            <a href="" class="nid-itm"> Organisasi-2 </a>
+                            <a href="" class="nid-itm"> Organisasi-3 </a>
+                        </div>
+                    </li>
+                    <li class="nav-item costom">
+                        <a class="nav-link">
+                            Istana
+                            <span class="dd-icon"> ▿ </span>
+                        </a>
+                        <div class="navbar-itm-dropdown">
+                            <a href="" class="nid-itm"> Istana Negara </a>
+                            <a href="" class="nid-itm"> Istana Merdeka </a>
+                            <a href="" class="nid-itm"> Istana Yogyakarta </a>
+                            <a href="" class="nid-itm"> Istana Cipanas </a>
+                            <a href="" class="nid-itm"> Gedung Negara  </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontak</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav login-reg">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link reg-btn"> Registrasi </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link log-btn"> Login </a>
+                    </li>
+                    <!-- <li class="nav-item user-valid">
+                        <div class="user-valid-info">
+                            <span> Queen Padma Lestari </span>
+                        </div>
+                        <div class="user-valid-menu">
+                            <a href="">
+                                <img src="icons/dashboard.svg" width="16" height="16" alt="">
+                                Dashboard
+                            </a>
+                            <form action="">
+                                <button type="submit">
+                                    <img src="icons/logout.svg" width="16" height="16" alt="">
+                                    Logout
+                                </button>
+                            </form>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Searching -->
+    <!-- <div class="container">
+        <div class="searching">
+            <form action="">
+                <input type="text" placeholder="Cari Artikel...." class="searchInput">
+                <button type="submit">Cari</button>
+            </form>
+        </div>
+    </div> -->
+
+    <!-- Costom Card Type 1 -->
+    <!-- <div class="container">
+        <div class="container-costom-card-type1">
+            <div class="costom-card-type1">
+                <section class="thumbnail-card-type1">
+                    <a href="/tolol" class="arsip">
+                        Istana Yogyakarta
+                    </a>
+                    <a href="">
+                        <img src="icons/betina.jpg" alt="">
+                    </a>
+                </section>
+                <section class="body-card-type1">
+                    <div class="ct1-header">
+                        <h3> <a href="">
+                            Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan
+                        </a> </h3>
+                    </div>
+                    <div class="ct1-excerpt">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime cupiditate nihil esse, eos eligendi maiores modi itaque culpa vel animi officia repellendus quam delectus eveniet quos voluptatem! Facilis, saepe similique.</p>
+                    </div>
+                    <div class="ct1-meta-info">
+                        <a href="" class="ct1-mi-itm user">
+                            Queen Padma Lesta
+                        </a>
+                        <a href="" class="ct1-mi-itm time">
+                            Rabu, 13 April 2022
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Costom HalfCard -->
+    <!-- <div class="container-halfCard">
+        <h2 class="halfCard-header">
+            Artikel Terbaru
+        </h2>
+        <div class="group-halfCard">
+            <a href="" class="halfCard" data-time="2 Jam lalu" data-Num="1">
+                <h4>
+                    Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan 
+                </h4>
+            </a>
+            <a href="" class="halfCard" data-time="2 Jam lalu" data-Num="2">
+                <h4>
+                    Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan Dan Dijaga dengan Baik
+                </h4>
+            </a>
+            <a href="" class="halfCard" data-time="2 Jam lalu" data-Num="3">
+                <h4>
+                    Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan Dan Dijaga dengan Baik
+                </h4>
+            </a>
+            <a href="" class="halfCard" data-time="2 Jam lalu" data-Num="4">
+                <h4>
+                    Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan Dan Dijaga dengan Baik
+                </h4>
+            </a>
+        </div>
+    </div> -->
+
+    <!-- Costom Card Type-2 -->
+    <div class="container-grid">
+        <!-- Category Title -->
+        <!-- <div class="pageTitle">
+            <section class="p-Title">
+                <h3>Semua Artikel</h3>
+            </section>
+        </div> -->
+
+        <!-- <div class="card-grid-container">
+            <div class="costom-card-type2">
+                <div class="thumbnail-card">
+                    <a href="">
+                        <img src="icons/betina.jpg" alt="">
+                    </a>
+                    <a href="/tolol" class="arsip">
+                        Istana Yogyakarta
+                    </a>
+                </div>
+                <div class="header-card">
+                    <h4><a href="">Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan Dan Dijaga dengan Baik dan jangan korupsi alsdjh</a></h4>
+                </div>
+                <div class="footer-card">
+                    <section class="fc-itm">
+                        <span class="fc-itm-waktu">
+                            12 September 2022
+                        </span>
+                        <a href="" class="fc-itm-user">
+                            Queen Padma Lesta
+                        </a>
+                    </section>
+                </div>
+            </div>
+            <div class="costom-card-type2">
+                <div class="thumbnail-card">
+                    <a href="">
+                        <img src="icons/betina.jpg" alt="">
+                    </a>
+                    <a href="/tolol" class="arsip">
+                        Istana Yogyakarta
+                    </a>
+                </div>
+                <div class="header-card">
+                    <h4><a href="">Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan</a></h4>
+                </div>
+                <div class="footer-card">
+                    <section class="fc-itm">
+                        <span class="fc-itm-waktu">
+                            12 September 2022
+                        </span>
+                        <a href="" class="fc-itm-user">
+                            Queen Padma Lesta
+                        </a>
+                    </section>
+                </div>
+            </div>
+            <div class="costom-card-type2">
+                <div class="thumbnail-card">
+                    <a href="">
+                        <img src="icons/betina.jpg" alt="">
+                    </a>
+                    <a href="/tolol" class="arsip">
+                        Istana Yogyakarta
+                    </a>
+                </div>
+                <div class="header-card">
+                    <h4><a href="">Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan</a></h4>
+                </div>
+                <div class="footer-card">
+                    <section class="fc-itm">
+                        <span class="fc-itm-waktu">
+                            12 September 2022
+                        </span>
+                        <a href="" class="fc-itm-user">
+                            Queen Padma Lesta
+                        </a>
+                    </section>
+                </div>
+            </div>
+            <div class="costom-card-type2">
+                <div class="thumbnail-card">
+                    <a href="">
+                        <img src="icons/betina.jpg" alt="">
+                    </a>
+                    <a href="/tolol" class="arsip">
+                        Istana Yogyakarta
+                    </a>
+                </div>
+                <div class="header-card">
+                    <h4><a href="">Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan</a></h4>
+                </div>
+                <div class="footer-card">
+                    <section class="fc-itm">
+                        <span class="fc-itm-waktu">
+                            12 September 2022
+                        </span>
+                        <a href="" class="fc-itm-user">
+                            Queen Padma Lesta
+                        </a>
+                    </section>
+                </div>
+            </div>
+            <div class="costom-card-type2">
+                <div class="thumbnail-card">
+                    <a href="">
+                        <img src="icons/betina.jpg" alt="">
+                    </a>
+                    <a href="/tolol" class="arsip">
+                        Istana Yogyakarta
+                    </a>
+                </div>
+                <div class="header-card">
+                    <h4><a href="">Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan</a></h4>
+                </div>
+                <div class="footer-card">
+                    <section class="fc-itm">
+                        <span class="fc-itm-waktu">
+                            12 September 2022
+                        </span>
+                        <a href="" class="fc-itm-user">
+                            Queen Padma Lesta
+                        </a>
+                    </section>
+                </div>
+            </div>
+            <div class="costom-card-type2">
+                <div class="thumbnail-card">
+                    <a href="">
+                        <img src="icons/betina.jpg" alt="">
+                    </a>
+                    <a href="/tolol" class="arsip">
+                        Istana Yogyakarta
+                    </a>
+                </div>
+                <div class="header-card">
+                    <h4><a href="">Tinjau KCBN Muaro Jambi, Presiden Harap Jejak Peradaban Dilestarikan</a></h4>
+                </div>
+                <div class="footer-card">
+                    <section class="fc-itm">
+                        <span class="fc-itm-waktu">
+                            12 September 2022
+                        </span>
+                        <a href="" class="fc-itm-user">
+                            Queen Padma Lesta
+                        </a>
+                    </section>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    
+    <!-- Pagination -->
+    <div class="paginate-container">
+        <a href="#prev" class="paginate-itm prev arrow" data-page="1">«</a>
+        <a href="#1" class="paginate-itm" data-page="1"></a>
+        <a href="" class="paginate-itm separator">...</a>
+        <a href="#2" class="paginate-itm" data-page="2"></a>
+        <a href="#3" class="paginate-itm" data-page="3"></a>
+        <a href="#4" class="paginate-itm" data-page="4"></a>
+        <a href="#5" class="paginate-itm" data-page="5"></a>
+        <a href="#6" class="paginate-itm" data-page="6"></a>
+        <a href="#7" class="paginate-itm" data-page="7"></a>
+        <a href="" class="paginate-itm separator">...</a>
+        <a href="#next" class="paginate-itm next arrow" data-page="3">»</a>
+    </div>
+</body>
+</html>
+
+
+                            
