@@ -644,7 +644,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Searching */
 .searching {
 	width: 100%;
-    margin: 2.5rem 0 1rem 0;
+    margin: 2.5rem 0 2rem 0;
 }
 .searching form {
 	display: flex;
@@ -679,8 +679,8 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: var(--bgSecondaryHover);
 }
 @media screen and (max-width: 991px) {
-	.searching {
-		margin: 2rem 0 .5rem;
+	div.searching {
+		margin: 2rem 0;
 	}
 }
 
