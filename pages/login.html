@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istana Presiden | Login</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script defer src="../js/login.js"></script>
+</head>
+<body>
+    <div class="container" id="container">
+        <!-- Form -->
+        <div class="form-container log-container">
+            <form action="">
+                <h1> Login </h1>
+                <div class="devider"></div>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="password">
+                <button type="submit"> Masuk </button>
+                <span class="alternate-text">Atau login menggunakan</span>
+                <div class="alternate-icons">
+                    <a href=""> <img src="../icons/facebook-50.svg" alt=""> </a>
+                    <a href=""> <img src="../icons/google-50.svg" alt=""> </a>
+                </div>
+            </form>
+        </div>
+        <div class="form-container reg-container">
+            <form action="">
+                <h1> Registrasi </h1>
+                <div class="devider"></div>
+                <input type="text" placeholder="Nama">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="password">
+                <button type="submit"> Submit </button>
+            </form>
+        </div>
+
+        <!-- Overlay Layer -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel right-panel">
+                    <h1> Halo, User Baru! </h1>
+                    <p> Jika kamu belum punya akun, silahkan buat akunya diform Registrasi. </p>
+                    <button type="button" class="ghost" id="regBtn"> ← Registrasi </button>
+                </div>
+                <div class="overlay-panel left-panel">
+                    <h1> Selamat Datang Kembali! </h1>
+                    <p> Jika kamu sudah punya akun, silahkan masuk melalui form login. </p>
+                    <button type="button" class="ghost" id="logBtn"> Login → </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
