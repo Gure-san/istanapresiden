@@ -270,6 +270,9 @@ form button:hover {
         opacity: 1;
         z-index: 3;
     }
+    .alternate-text {
+        font-size: .7rem;
+    }
     .alternate-icons a img {
         width: 1.4rem;
     }
