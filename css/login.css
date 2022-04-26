@@ -41,6 +41,13 @@ box-sizing: border-box;
 }
 
 
+
+::selection {
+    background-color: #3ecf8e;
+}
+.tb-container {
+    display: none;
+}
 .container {
     position: relative;
     width: 48rem;
@@ -56,7 +63,7 @@ box-sizing: border-box;
     height: 100%;
     transition: 600ms ease-in-out;
 }
-.form-container form {
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,29 +71,28 @@ box-sizing: border-box;
     width: 100%;
     height: 100%;
 }
-.form-container form .devider {
+form .devider {
     width: 50%;
     height: 3px;
     border-radius: 1rem;
     margin: 1rem 0;
     background-color: #3ecf8e;
 }
-.form-container form input {
+form input {
     margin-bottom: .8rem;
-    width: clamp(18rem, 50vw, 18rem);
+    width: clamp(16rem, 80vw, 18rem);
     text-align: center;
     padding: .5rem 1rem;
     font-size: .9rem;
+    font-weight: 600;
     border: 2px solid black;
     border-radius: .5rem;
+    outline: none;
 }
-.form-container form input::placeholder {
-    font-size: .9rem;
-}
-.form-container form input[type="password"] {
+form input[type="password"] {
     font-size: 1rem;
 }
-.container button {
+form button, .overlay-panel button {
     font-size: .7rem;
     background-color: var(--bgSecondary);
     color: white;
@@ -97,10 +103,10 @@ box-sizing: border-box;
     transition: 50ms;
     border-radius: 1rem;
 }
-.form-container form button:active {
-    transform: scale(.9);
+form button:active {
+    transform: scale(.96);
 }
-.form-container form button:hover {
+form button:hover {
     background-color: var(--bgSecondaryHover);
 }
 .alternate-text {
@@ -224,4 +230,127 @@ box-sizing: border-box;
 }
 .container.right-panel .right-panel {
     transform: translateX(20%);
+}
+
+
+
+
+/* Responsive Breakpoints */
+@media screen and (max-width: 768px) {
+    .overlay-container {
+        display: none;
+    }
+    .container {
+        width: clamp(19rem, 85vw, 36rem);
+        min-height: none;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1rem;
+        box-shadow: 0 0 1rem #00000049;
+    }
+    .container .devider {
+        width: 12rem;
+    }
+    .form-container {
+        padding: 2rem 0;
+        width: 100%;
+        transition: transform 600ms ease;
+    }
+    .log-container {
+        position: relative;
+        z-index: 2;
+        transform: translateY(0);
+    }
+    .reg-container {
+        position: absolute;
+        transform: translateY(100%);
+        opacity: 1;
+        z-index: 3;
+    }
+    .alternate-icons a img {
+        width: 1.4rem;
+    }
+
+    /* Toggle Btn */
+        .tb-container {
+            display: block;
+            position: absolute;
+            bottom: 0rem;
+            right: .8rem;
+            z-index: 10;
+        }
+        .tb-group {
+            position: relative;
+            width: 65px;
+            height: 38px;
+            display: flex;
+        }
+        .tb-log-container {
+            opacity: 0;
+            visibility: hidden;
+            z-index: 5;
+        }
+        .tb-reg-container {
+            z-index: 8;
+        }
+        .tb-group section {
+            position: absolute;
+        }
+        .tb-group section a {
+            text-decoration: none;
+            margin-left: .5rem;
+            padding: .4rem .8rem;
+            border-radius: .3rem;
+            background-color: var(--bgSecondary);
+            color: white;
+            cursor: pointer;
+        }
+        .tb-info {
+            background-color: var(--bgSecondary);
+            padding: .3rem .4rem;
+            border-radius: .2rem;
+            color: white;
+            font-style: italic;
+            cursor: default;
+            position: relative;
+        }
+        .tb-info::before {
+            content: 'Belum punya akun? Registrasi sekarang!';
+            position: absolute;
+            background-color: inherit;
+            top: -.5rem;
+            font-size: .8rem;
+            padding: .4rem;
+            border-radius: .2rem;
+            left: -13.4rem;
+            width: 25ch;
+            text-align: center;
+            transition: 300ms;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(.2rem);
+        }
+        .log-info::before {
+            content: 'Sudah punya akun? Login sekarang!';
+        }
+        .tb-info:hover::before {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+
+    /* Animation */
+    .container.reg-form-active .reg-container {
+        z-index: 2;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .container.reg-form-active .log-container {
+        transform: translateY(-10rem);
+    }
+    .container.reg-form-active .tb-log-container {
+        opacity: 1;
+        visibility: visible;
+        z-index: 8;
+    }
 }
