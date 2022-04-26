@@ -80,7 +80,7 @@ form .devider {
 }
 form input {
     margin-bottom: .8rem;
-    width: clamp(16rem, 80vw, 18rem);
+    width: clamp(15rem, 50vw, 18rem);
     text-align: center;
     padding: .5rem 1rem;
     font-size: .9rem;
@@ -255,6 +255,9 @@ form button:hover {
         padding: 2rem 0;
         width: 100%;
         transition: transform 600ms ease;
+    }
+    .form-container form input {
+        font-size: .8rem;
     }
     .log-container {
         position: relative;
