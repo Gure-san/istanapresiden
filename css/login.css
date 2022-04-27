@@ -23,9 +23,9 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    place-items: center; 
+    place-items: center;
 }
-.container h1, h2, h3, h4, h5, h6 { 
+.content-container h1, h2, h3, h4, h5, h6 { 
     margin: 0; 
     padding: 0; 
 }
@@ -43,24 +43,26 @@ box-sizing: border-box;
 
 
 .content-container {
-    /* background-color: red; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translateY(-2rem);
+    position: relative;
 }
 .page-header {
-    display: block;
+    display: flex;
     flex-direction: column;
     align-items: center;
-}
-.page-header a {
-    display: inline-block;
-    background-color: red;
+    margin-bottom: 1.5rem;
 }
 .page-header a img {
-    width: 5rem;
-    height: 5rem;
-} 
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: .5rem;
+}
+.page-header h1 {
+    font-size: 2.2rem;
+}
 
 
 ::selection {
@@ -264,7 +266,6 @@ form button:hover {
 
 
 
-
 /* Responsive Breakpoints */
 @media screen and (max-width: 768px) {
     .overlay-container {
@@ -373,6 +374,9 @@ form button:hover {
             opacity: 1;
             visibility: visible;
             transform: translateX(0);
+        }
+        .tb-info > span {
+            pointer-events: none;
         }
 
     /* Animation */
