@@ -148,6 +148,7 @@ form button:hover {
     width: 50%;
     left: 0;
     opacity: 1;
+    transform: translateX(0);
 }
 .reg-container {
     left: 0;
@@ -211,25 +212,33 @@ form button:hover {
 
 /* Animation */
     
-.container.right-panel-active .log-container {
-    transform: translateX(100%);
-}
-.container.right-panel-active .overlay-container {
-    transform: translateX(-100%);
-}
-.container.right-panel-active .reg-container {
-    transform: translate(100%);
-    z-index: 3;
-    opacity: 1;
-}
-.container.right-panel-active .overlay {
-    transform: translateX(50%);
-}
-.container.right-panel-active .left-panel {
-    transform: translateX(0);
-}
-.container.right-panel .right-panel {
-    transform: translateX(20%);
+@media screen and (min-width: 769px) {
+    .container.right-panel-active .log-container,
+    .reg-container:target ~ div.log-container {
+        transform: translateX(100%);
+    }
+    .container.right-panel-active .overlay-container,
+    .reg-container:target + div.overlay-container {
+        transform: translateX(-100%);
+    }
+    .container.right-panel-active .reg-container,
+    .reg-container:target {
+        transform: translate(100%);
+        z-index: 3;
+        opacity: 1;
+    }
+    .container.right-panel-active .overlay,
+    .reg-container:target + div.overlay-container .overlay{
+        transform: translateX(50%);
+    }
+    .container.right-panel-active .left-panel,
+    .reg-container:target + div.overlay-container .overlay .left-panel {
+        transform: translateX(0);
+    }
+    .container.right-panel .right-panel,
+    .reg-container:target + div.overlay-container .overlay .right-panel {
+        transform: translateX(20%);
+    }
 }
 
 
@@ -346,15 +355,18 @@ form button:hover {
         }
 
     /* Animation */
-    .container.reg-form-active .reg-container {
+    .container.reg-form-active .reg-container,
+    .reg-container:target {
         z-index: 2;
         opacity: 1;
         transform: translateY(0);
     }
-    .container.reg-form-active .log-container {
+    .container.reg-form-active .log-container,
+    .reg-container:target ~ div.log-container {
         transform: translateY(-10rem);
     }
-    .container.reg-form-active .tb-log-container {
+    .container.reg-form-active .tb-log-container,
+    .reg-container:target ~ div.log-container ~ .tb-container .tb-group .tb-log-container {
         opacity: 1;
         visibility: visible;
         z-index: 8;
