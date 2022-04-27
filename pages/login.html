@@ -11,60 +11,69 @@
     <script defer src="../js/login.js"></script>
 </head>
 <body>
-    <!-- Dekstop Layout -->
-    <div class="container" id="container">
-        <!-- Toggle Btn Mobile -->
-        <div class="tb-container">
-            <div class="tb-group">
-                <section class="tb-reg-container">
-                    <span class="tb-info reg-info"> i </span>
-                    <a href="#reg"> ↓ </a>
-                </section>
-                <section class="tb-log-container">
-                    <span class="tb-info log-info"> i </span>
-                    <a href="#"> ↑ </a>
-                </section>
+    <div class="content-container">
+        <div class="page-header">
+            <a href="">
+                <img src="../icons/setneg-logo.svg" alt="">
+            </a>
+            <div class="devider"></div>
+            <h1> Istana Presiden </h1>
+        </div>
+
+        <div class="container" id="container">
+            <!-- Toggle Btn Mobile -->
+            <div class="tb-container">
+                <div class="tb-group">
+                    <section class="tb-reg-container">
+                        <span class="tb-info reg-info"> i </span>
+                        <a href="#reg"> ↓ </a>
+                    </section>
+                    <section class="tb-log-container">
+                        <span class="tb-info log-info"> i </span>
+                        <a href="#"> ↑ </a>
+                    </section>
+                </div>
             </div>
-        </div>
-
-        <!-- Form -->
-        <div class="form-container log-container" id="log">
-            <form action="">
-                <h1> Login </h1>
-                <div class="devider"></div>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button type="submit"> Masuk </button>
-                <span class="alternate-text">Atau login menggunakan</span>
-                <div class="alternate-icons">
-                    <a href="" title="Facebook"> <img src="../icons/facebook-50.svg" alt=""> </a>
-                    <a href="" title="Google"> <img src="../icons/google-50.svg" alt=""> </a>
-                </div>
-            </form>
-        </div>
-        <div class="form-container reg-container" id="reg">
-            <form action="">
-                <h1> Registrasi </h1>
-                <div class="devider"></div>
-                <input type="text" placeholder="Nama">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <button type="submit"> Submit </button>
-            </form>
-        </div>
-
-        <!-- Overlay Layer -->
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel right-panel">
-                    <h1> Halo, User Baru! </h1>
-                    <p> Jika kamu belum punya akun, silahkan buat akunya diform Registrasi. </p>
-                    <button type="button" class="ghost" id="regBtn"> ← Registrasi </button>
-                </div>
-                <div class="overlay-panel left-panel">
-                    <h1> Selamat Datang Kembali! </h1>
-                    <p> Jika kamu sudah punya akun, silahkan masuk melalui form login. </p>
-                    <button type="button" class="ghost" id="logBtn"> Login → </button>
+    
+            <!-- Form -->
+            <div class="form-container log-container" id="log">
+                <form action="">
+                    <h1> Login </h1>
+                    <div class="devider"></div>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit"> Masuk </button>
+                    <span class="alternate-text">Atau login menggunakan</span>
+                    <div class="alternate-icons">
+                        <a href="" title="Facebook"> <img src="../icons/facebook-50.svg" alt=""> </a>
+                        <a href="" title="Google"> <img src="../icons/google-50.svg" alt=""> </a>
+                    </div>
+                </form>
+            </div>
+            <div class="form-container reg-container" id="reg">
+                <form action="">
+                    <h1> Registrasi </h1>
+                    <div class="devider"></div>
+                    <input type="text" placeholder="Nama">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <button type="submit"> Submit </button>
+                </form>
+            </div>
+    
+            <!-- Overlay Layer -->
+            <div class="overlay-container">
+                <div class="overlay">
+                    <div class="overlay-panel right-panel">
+                        <h1> Halo, User Baru! </h1>
+                        <p> Jika kamu belum punya akun, silahkan buat akunya diform Registrasi. </p>
+                        <button type="button" class="ghost" id="regBtn"> ← Registrasi </button>
+                    </div>
+                    <div class="overlay-panel left-panel">
+                        <h1> Selamat Datang Kembali! </h1>
+                        <p> Jika kamu sudah punya akun, silahkan masuk melalui form login. </p>
+                        <button type="button" class="ghost" id="logBtn"> Login → </button>
+                    </div>
                 </div>
             </div>
         </div>
