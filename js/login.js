@@ -18,10 +18,24 @@ logBtn.addEventListener('click', () => {
 // Mobile Layout
 const tbReg = document.querySelector('.tb-reg-container a');
 const tbLog = document.querySelector('.tb-log-container a');
+const formSubmit = Array.from(document.querySelectorAll(".form-container form"));
 
+formSubmit.forEach( elmnt => {
+    elmnt.addEventListener('submit', () => true);
+});
 if( window.innerWidth <= 786 && window.location.hash === '#reg') {
     container.classList.add('reg-form-active');
 }
 
-tbReg.addEventListener('click', (e) => {e.preventDefault(); container.classList.add('reg-form-active')});
+tbReg.addEventListener('click', (e) => {
+    e.preventDefault();
+    container.classList.add('reg-form-active')
+}, false);
 tbLog.addEventListener('click', () => container.classList.remove('reg-form-active'));
+
+
+// Succees Message
+const clsMsg = document.querySelector('.clsMsg');
+clsMsg.addEventListener('click', e => {
+    e.target.parentNode.parentNode.style.display = 'none';
+});

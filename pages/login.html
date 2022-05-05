@@ -7,7 +7,6 @@
     <title>Istana Presiden | Login</title>
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="favicon" href="../icons/iconHeader.svg" type="image/x-icon">
     <script defer src="../js/login.js"></script>
 </head>
 <body>
@@ -17,6 +16,12 @@
                 <img src="../icons/setneg-logo.svg" alt="">
             </a>
             <h1> Istana Presiden </h1>
+            <div class="msgContainer add fail">
+                <div class="msg">
+                    Registrasi Berhasil, silahkan login untuk melanjutkan!
+                    <span class="clsMsg"> × </span>
+                </div>
+            </div>
         </div>
 
         <div class="container" id="container">
@@ -25,21 +30,24 @@
                 <div class="tb-group">
                     <section class="tb-reg-container">
                         <span class="tb-info reg-info"> <span>i</span> </span>
-                        <a href="#reg"> ↓ </a>
+                        <a href="#reg" class="tb"> ↓ </a>
                     </section>
                     <section class="tb-log-container">
                         <span class="tb-info log-info"> <span>i</span> </span>
-                        <a href="#"> ↑ </a>
+                        <a href="#" class="tb"> ↑ </a>
                     </section>
                 </div>
             </div>
     
             <!-- Form -->
             <div class="form-container log-container" id="log">
-                <form action="">
+                <form action="/bruh">
                     <h1> Login </h1>
                     <div class="devider"></div>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" class="">
+                    <div class="invalid-message">
+                        <!-- Isikan email anda terlebih dahulu! -->
+                    </div>
                     <input type="password" placeholder="Password">
                     <button type="submit"> Masuk </button>
                     <span class="alternate-text">Atau login menggunakan</span>
@@ -50,7 +58,7 @@
                 </form>
             </div>
             <div class="form-container reg-container" id="reg">
-                <form action="">
+                <form action="/bruh">
                     <h1> Registrasi </h1>
                     <div class="devider"></div>
                     <input type="text" placeholder="Nama">
