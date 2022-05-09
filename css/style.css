@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
 	.user-valid-menu {
 		position: absolute;
 		background: var(--bgDropdown);
-		width: 100%;
+		width: clamp(190px, 100%, 190px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
