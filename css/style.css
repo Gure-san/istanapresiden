@@ -826,7 +826,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: var(--bgDropdown);
 	box-shadow: none;
 }
-.group-halfCard .halfCard::before, .group-halfCard .halfCard::after {
+.group-halfCard .halfCard::before {
 	position: absolute;
 	border-radius: .3rem;
 	display: flex;
@@ -835,24 +835,13 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: var(--bgSecondary);
 	box-shadow: 0 0 1rem var(--bgDropdown);
 	font-weight: bold;
-}
-.group-halfCard .halfCard::before {
 	content: attr(data-time);
 	width: auto;
 	font-size: .75rem;
-	left: 2rem;
+	left: -1rem;
 	padding: .5rem 1rem;
 	border-radius: .3rem 1rem 1rem .3rem;
 	top: -.7rem;
-}
-.group-halfCard .halfCard::after {
-	width: 2rem;
-	height: 2rem;
-	content: attr(data-Num);
-	top: -.8rem;
-	left: -.8rem;
-	background-color: var(--bgSecondary);
-	box-shadow: 0 0 1rem var(--bgDropdown);
 }
 @media screen and (max-width: 1024px) {
 	.container-halfCard .group-halfCard {
@@ -883,6 +872,8 @@ h1, h2, h3, h4, h5, h6 {
 		width: clamp(18rem, 90vw, 24rem);
 		position: relative;
 		border-radius: .5rem;
+		border: 2px solid var(--devider);
+		box-shadow: 0 0  1rem #0000001e;
 }
 .thumbnail-card {
 	position: relative;
@@ -903,55 +894,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 .thumbnail-card img {
 		max-width: 100%;
-		border-radius: 1rem 1rem 0 0;
+		border-radius: .5rem .5rem 0 0;
 }
 .header-card {
-		box-sizing: border-box;
-		height: clamp(5rem, 100vh, 5rem);
-		padding: .8rem 0;
+		height: clamp(8rem, 100vh, 8rem);
+		width: 100%;
+		padding: 1rem;
 		display: flex;
+		justify-content: center;
 		align-items: center;
 		overflow: hidden;
 }
-.header-card h4 a {
+.header-card a {
 		margin: 0;
 		color: black;
 		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.2rem;
 }
 .footer-card {
 	display: flex;
+	width: 100%;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-bottom: 1.5rem;
 }
 .footer-card .fc-itm {
-	display: flex;
-	flex-direction: column;
-	color: white;
-	width: 100%;
-}
-.fc-itm .fc-itm-waktu {
-	padding: .8rem 1rem;
-	margin-bottom: .3rem;
-	font-size: .8rem;
-	border-radius: 0 .3rem 0rem 0;
-	display: flex;
-	align-items: center;
-	background-color: var(--bgSecondary);
 	width: max-content;
+	background-color: var(--devider);
+	padding: .5rem 1rem;
+	border-radius: .3rem;
+	border: 2px solid var(--bgSecondary);
 }
-.fc-itm .fc-itm-user {
-	background-color: var(--bgSecondary);
-	padding: .8rem 1.5rem;
-	border-radius: 0 .5rem 0rem .5rem;
-	min-width: 190px;
-	max-width: 200px;
-	font-size: .8rem;
-	display: flex;
+.fc-itm > * {
+	color: black;
 	text-decoration: none;
-	color: white;
-	justify-content: center;
-	transition: 300ms;
-}
-.fc-itm .fc-itm-user:hover {
-	background-color: var(--bgSecondaryHover);
+	font-size: .83rem;
+	font-weight: 600;
 }
 
 	/* Tablet Card Size */
