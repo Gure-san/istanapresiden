@@ -1,15 +1,15 @@
 /* Css Reset */
 :root {
-		--bgPrimary: #32325D;
+		--bgPrimary: #32325d;
 		--bgSecondary: #4a4aa0;
 		--bgSecondaryHover: #303075;
-		--bgBorderDrop: 2px solid #3ecf8e;
-		--bgDropdown: #222250;
+		--bgtertiary: #3ecf8e;
+		--bgBorderDrop: 2px solid var(--bgtertiary);
 		--devider: #eaebec;
-		--overlayImg: #201f1f9a;
 		--textMutedLinks: #8789C6;
-		--textLink: #267ef1;
-		--textMuted: #9e9e9e;
+		--textMuted: #5f6368;
+		/* --bgDropdown: #222250; */
+		/* --overlayImg: #201f1f9a; */
 }
 @font-face {
 		font-family: 'poppinsmedium';
@@ -180,7 +180,7 @@ h1, h2, h3, h4, h5, h6 {
 		position: absolute;
 		pointer-events: none;
 		border-color: #3ecf8e00;
-		border-bottom-color: #3ecf8e;
+		border-bottom-color: var(--bgtertiary);
 		border-width: 12px;
 		margin-left: -12px;
 	}
@@ -200,7 +200,7 @@ h1, h2, h3, h4, h5, h6 {
 		height: 2px;
 		transition: 300ms;
 		border: 1rem;
-		background-color: #3ecf8e;
+		background-color: var(--bgtertiary);
 	}
 	.navbar-nav:not(.login-reg) .nav-item.costom:nth-of-type(3) .navbar-itm-dropdown {
 		left: -80%;
@@ -221,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
 		visibility: hidden;
 		opacity: 0;
 		position: absolute;
-		background-color: var(--bgDropdown);
+		background-color: var(--bgPrimary);
 		border-top: var(--bgBorderDrop);
 		display: flex;
 		flex-direction: column;
@@ -291,7 +291,7 @@ h1, h2, h3, h4, h5, h6 {
 		position: absolute;
 		pointer-events: none;
 		border-color: transparent;
-		border-bottom-color: #3ecf8e;
+		border-bottom-color: var(--bgtertiary);
 		border-width: 12px;
 		margin-left: -12px;
 	}
@@ -328,7 +328,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.user-valid-menu {
 		position: absolute;
-		background: var(--bgDropdown);
+		background: var(--bgPrimary);
 		width: clamp(190px, 100%, 190px);
 		display: flex;
 		flex-direction: column;
@@ -337,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
 		border-radius: .5rem;
 		padding: .5rem;
 		transition: 0ms 300ms;
-		border-top: 2px solid #3ecf8e;
+		border-top: 2px solid var(--bgtertiary);
 		transform: translateY(-1rem);
 		opacity: 0;
 		visibility: hidden;
@@ -398,7 +398,7 @@ h1, h2, h3, h4, h5, h6 {
 		border-radius: .25rem;
 	}
 	.login-reg .nav-item .nav-link:hover {
-		background-color: var(--bgDropdown);
+		background-color: var(--bgPrimary);
 	}
 	/* Navbar Button Toggle */
 	.navbar-btn-toggle {
@@ -417,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 			top: 80%;
 			right: 1.3rem;
 			margin-top: 1rem;
-			background-color: var(--bgDropdown);
+			background-color: var(--bgPrimary);
 			border-radius: .5rem;
 			opacity: 0;
 			visibility: hidden;
@@ -583,7 +583,7 @@ h1, h2, h3, h4, h5, h6 {
 			height: 3px;
 		}
 		.login-reg .nav-item .nav-link {
-			border: 3px solid #3ecf8e;
+			border: 3px solid var(--bgtertiary);
 		}
 	}
 
@@ -819,11 +819,11 @@ h1, h2, h3, h4, h5, h6 {
 	text-decoration: none;
 	color: #ededed;
 	position: relative;
-	box-shadow: 0 0 1rem var(--bgDropdown);
+	box-shadow: 0 0 1rem var(--bgPrimary);
 	background-color: var(--bgSecondaryHover);
 }
 .group-halfCard .halfCard:hover {
-	background-color: var(--bgDropdown);
+	background-color: var(--bgPrimary);
 	box-shadow: none;
 }
 .group-halfCard .halfCard::before {
@@ -833,7 +833,7 @@ h1, h2, h3, h4, h5, h6 {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--bgSecondary);
-	box-shadow: 0 0 1rem var(--bgDropdown);
+	box-shadow: 0 0 1rem var(--bgPrimary);
 	font-weight: bold;
 	content: attr(data-time);
 	width: auto;
