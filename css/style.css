@@ -1129,3 +1129,119 @@ h1, h2, h3, h4, h5, h6 {
 		transform: translateY(-3rem);
 	}
 }
+
+
+
+/* Footer */
+.footer-container {
+    width: 100%;
+    margin-top: 4rem;
+    background-color: var(--bgPrimary);
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    width: 100%;
+    max-width: 1320px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 4rem;
+    color: white;
+}
+.media-footer {
+    display: flex;
+}
+.info-media-footer {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.info-media-profil {
+    margin-left: 2rem;
+    padding: .5rem 2rem;
+    position: relative;
+}
+.info-media-profil::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    width: 2px;
+    height: 110px;
+    background-color: var(--textMutedLinks);
+}
+.info-media-profil .media-profil {
+    display: flex;
+    flex-direction: column;
+    margin: .3rem 0;
+    text-transform: uppercase;
+}
+.info-media-profil > span {
+    font-size: .8rem;
+    color: var(--textMutedLinks);
+}
+.links-media-footer {
+    width: 50%;
+    padding: .5rem 3rem 0 0;
+    display: flex;
+    justify-content: end;
+}
+.links-media-footer .links {
+    display: flex;
+    flex-direction: column;
+}
+.links-media-footer .links h4 {
+    margin-bottom: 1rem;
+}
+.links-media-footer .links > a {
+    text-decoration: none;
+    font-size: .9rem;
+    margin-top: .5rem;
+    color: var(--textMutedLinks);
+}
+.links-media-footer .links > a:hover {
+    color: white;
+}
+.links-media-footer .links:not(:last-child) {
+    margin-right: 3rem;
+}
+.copyright-footer {
+    font-size: .8rem;
+    color: var(--textMutedLinks);
+    padding-top: 1rem;
+}
+/* Footer Responsive Breakpoints  */
+@media screen and (max-width: 1024px) {
+    .info-media-icon {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 2rem 0;
+        padding-bottom: 0;
+        max-width: auto;
+    }
+    .media-footer {
+        flex-direction: column;
+    }
+    .info-media-footer {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .info-media-profil {
+        margin-left: 0;
+        padding: 0 0 1rem;
+    }
+    .info-media-profil .media-profil {
+        font-size: clamp(.9rem, 1vw, 1rem);
+    }
+    .links-media-footer, .info-media-profil::before {
+        display: none;
+    }
+    .copyright-footer {
+        padding: 1rem 4rem;
+        background-color: #212153;
+    }
+}
