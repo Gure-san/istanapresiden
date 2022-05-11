@@ -899,7 +899,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 100%;
         padding: 1rem 2rem .5rem 2rem;
         display: flex;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         overflow: hidden;
 }
@@ -913,12 +913,19 @@ h1, h2, h3, h4, h5, h6 {
 .footer-card {
     display: flex;
     width: 100%;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    padding: .5rem 0 1.3rem;
+    padding: 0rem 0 1rem 2rem;
     /* background-color: red; */
 }
-.footer-card .fc-itm {
+.footer-card .separator {
+    margin: 0 .3rem;
+}
+.footer-card > * {
+    font-size: .75rem;
+    color: black;
+}
+/* .footer-card .fc-itm {
     width: max-content;
     background-color: var(--lighter);
     border: 2px solid var(--lighterDark);
@@ -933,7 +940,7 @@ h1, h2, h3, h4, h5, h6 {
     color: black;
     text-decoration: none;
     font-size: .75rem;
-}
+} */
 
     /* Tablet Card Size */
     @media screen and (max-width: 1273px) and (min-width: 636px) {
