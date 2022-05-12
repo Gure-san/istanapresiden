@@ -4,14 +4,12 @@
         --bgSecondary: #303075;
         --bgSecondaryHover: #3e3e83;
         --bgtertiary: #3ecf8e;
-        --bgBorderDrop: 2px solid var(--bgtertiary);
         --lighter: #fafafa;
         --lighterDark: #e6e6e6;
         --textMutedLinks: #8789C6;
         --textMuted: #5f6368;
-        --lhParagraf: 1.75rem;
-        /* --bgDropdown: #222250; */
-        /* --overlayImg: #201f1f9a; */
+        --generalTeks: #202124;
+        --subTeks: #5f6368;
 }
 @font-face {
         font-family: 'poppinsMedium';
@@ -101,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: var(--bgBorderDrop);
+    border: 2px solid var(--bgtertiary);
     color: #222250;
     cursor: pointer;
     z-index: 99;
@@ -228,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
         position: absolute;
         transform: translateY(-1rem);
         background-color: var(--bgPrimary);
-        border-top: var(--bgBorderDrop);
+        border-top: 2px solid var(--bgtertiary);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -292,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: -12px;
     }
     .nav-item.user-valid .user-valid-info {
-        border: var(--bgBorderDrop);
+        border: 2px solid var(--bgtertiary);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -376,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
         margin-right: 1rem;
     }
     .login-reg .nav-item .nav-link {
-        border: var(--bgBorderDrop);
+        border: 2px solid var(--bgtertiary);
         color: white;
         display: flex;
         justify-content: center;
@@ -545,7 +543,7 @@ h1, h2, h3, h4, h5, h6 {
                 transform: translateY(0);
                 padding: .8rem;
                 margin-left: 1rem;
-                border-bottom: var(--bgBorderDrop);
+                border-bottom: 2px solid var(--bgtertiary);
                 box-shadow: none;
                 display: none;
             }
@@ -740,28 +738,26 @@ h1, h2, h3, h4, h5, h6 {
 .ct1-excerpt {
     font-size: .875rem;
     line-height: 1.2rem;
+    color: var(--generalTeks);
 }
 .ct1-meta-info {
     display: flex;
+    align-items: center;
 }
 .ct1-header h3 a {
-    color: black;
+    color: var(--generalTeks);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .ct1-meta-info .ct1-mi-itm {
-    color: white;
-    background-color: var(--bgSecondary);
-    text-decoration: none;
+    color: var(--generalTeks);
     font-size: .75rem;
     display: flex;
-    padding: .8rem 1rem;
     border-radius: .3rem;
     transition: 300ms;
 }
-.ct1-mi-itm.user {
-    margin-right: 1rem;
-
+.ct1-meta-info .separator {
+    margin: 0 .5rem;
 }
     /* Responsive Card Type 1 Breakpoints */
 @media screen and (max-width: 991px) {
@@ -881,12 +877,12 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     z-index: 5;
     right: 0;
-    padding: .8rem 1rem;
+    padding: .5rem .8rem;
     border-radius: 0 .5rem 0 .5rem;
-    font-size: .8rem;
+    font-size: .75rem;
     text-decoration: none;
     color: white;
-    background-color: #000000be;
+    background-color: #00000060;
 }
 .thumbnail-card img {
         max-width: 100%;
@@ -897,15 +893,14 @@ h1, h2, h3, h4, h5, h6 {
         max-height: 8rem;
         min-height: 2rem;
         width: 100%;
-        padding: 1rem 2rem .5rem 2rem;
+        padding: 2rem 2rem .5rem 2rem;
         display: flex;
-        /* justify-content: center; */
         align-items: center;
         overflow: hidden;
 }
 .header-card a {
         margin: 0;
-        color: black;
+        color: var(--generalTeks);
         text-decoration: none;
         font-weight: 500;
         font-size: 1.125rem;
@@ -913,34 +908,16 @@ h1, h2, h3, h4, h5, h6 {
 .footer-card {
     display: flex;
     width: 100%;
-    /* justify-content: center; */
     align-items: center;
-    padding: 0rem 0 1rem 2rem;
-    /* background-color: red; */
+    padding: 0rem 0 2rem 2rem;
 }
 .footer-card .separator {
     margin: 0 .3rem;
 }
 .footer-card > * {
     font-size: .75rem;
-    color: black;
+    color: var(--generalTeks);
 }
-/* .footer-card .fc-itm {
-    width: max-content;
-    background-color: var(--lighter);
-    border: 2px solid var(--lighterDark);
-    padding: .3rem .8rem;
-    border-radius: .3rem;
-
-}
-.footer-card .fc-itm:last-child {
-    margin-left: .8rem;
-}
-.fc-itm > * {
-    color: black;
-    text-decoration: none;
-    font-size: .75rem;
-} */
 
     /* Tablet Card Size */
     @media screen and (max-width: 1273px) and (min-width: 636px) {
