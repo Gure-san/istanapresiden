@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
-    color: white;
+    color: var(--lighter);
     white-space: nowrap;
 }
 .navbar .container .navbar-brand img {
@@ -161,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: .9rem;
 }
 .navbar-nav .nav-item .nav-link:hover {
-    color: white;
+    color: var(--lighter);
 }
 .nav-item .nav-link {
     padding: .5rem;
@@ -258,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .nid-itm:hover {
-        color: white;
+        color: var(--lighter);
         background-color: var(--bgSecondaryHover);
     }
     .nid-itm:hover::after {
@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .user-valid-info > span {
         font-size: .8rem;
-        color: white;
+        color: var(--lighter);
         line-height: 0;
     }
     .user-valid-info > span::after {
@@ -351,7 +351,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .user-valid-menu > a:hover, .user-valid-menu form button:hover {
         background-color: var(--bgSecondaryHover);
-        color: white;
+        color: var(--lighter);
     }
     .user-valid-menu > form {
         width: 100%;
@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .login-reg .nav-item .nav-link {
         border: 2px solid var(--bgtertiary);
-        color: white;
+        color: var(--lighter);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -481,7 +481,7 @@ h1, h2, h3, h4, h5, h6 {
             z-index: 2;
         }
         .navbar-btn-toggle span {
-            background-color: white;
+            background-color: var(--lighter);
             width: 100%;
             height: 3px;
             border-radius: 1rem;
@@ -677,7 +677,7 @@ h1, h2, h3, h4, h5, h6 {
     outline: none;
     background-color: var(--bgSecondary);
     border: none;
-    color: white;
+    color: var(--lighter);
     font-size: .9rem;
     border-radius: 0 .5rem .5rem 0;
     cursor: pointer;
@@ -750,7 +750,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.2rem;
 }
 .ct1-meta-info .ct1-mi-itm {
-    color: var(--generalTeks);
+    color: var(--subTeks);
     font-size: .75rem;
     display: flex;
     border-radius: .3rem;
@@ -787,7 +787,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
 }
 .container-halfCard .halfCard-header {
-    color: white;
+    color: var(--lighter);
     margin-bottom: 3rem;
 }
 .container-halfCard .group-halfCard {
@@ -881,7 +881,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 0 .5rem 0 .5rem;
     font-size: .75rem;
     text-decoration: none;
-    color: white;
+    color: var(--lighter);
     background-color: #00000060;
 }
 .thumbnail-card img {
@@ -916,7 +916,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-card > * {
     font-size: .75rem;
-    color: var(--generalTeks);
+    color: var(--subTeks);
 }
 
     /* Tablet Card Size */
@@ -959,7 +959,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .paginate-container .paginate-itm {
     text-decoration: none;
-    color: white;
+    color: var(--lighter);
     background-color: var(--bgSecondary);
     width: 1rem;
     height: 1rem;
@@ -1065,7 +1065,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .nf-btn-back {
     background-color: var(--bgSecondary);
-    color: white;
+    color: var(--lighter);
     text-decoration: none;
     font-size: .9rem;
     padding: .9rem 1rem;
@@ -1111,7 +1111,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     padding: 2rem 4rem;
-    color: white;
+    color: var(--lighter);
 }
 .media-footer {
     display: flex;
@@ -1165,7 +1165,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--textMutedLinks);
 }
 .links-media-footer .links > a:hover {
-    color: white;
+    color: var(--lighter);
 }
 .links-media-footer .links:not(:last-child) {
     margin-right: 3rem;
