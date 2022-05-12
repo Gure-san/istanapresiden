@@ -754,7 +754,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: .75rem;
     display: flex;
     border-radius: .3rem;
-    transition: 300ms;
+}
+.ct1-meta-info .ct1-mi-itm.user:hover {
+    color: var(--generalTeks);
 }
 .ct1-meta-info .separator {
     margin: 0 .5rem;
@@ -890,7 +892,7 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: .5rem .5rem 0 0;
 }
 .header-card {
-        max-height: 8rem;
+        max-height: 10rem;
         min-height: 2rem;
         width: 100%;
         padding: 2rem 2rem .5rem 2rem;
@@ -917,6 +919,9 @@ h1, h2, h3, h4, h5, h6 {
 .footer-card > * {
     font-size: .75rem;
     color: var(--subTeks);
+}
+.footer-card a:hover {
+    color: var(--generalTeks);
 }
 
     /* Tablet Card Size */
