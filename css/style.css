@@ -423,7 +423,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 1rem;
         display: block;
     }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
         .searchIcon {
             display: none;
         }
@@ -731,7 +731,7 @@ h1, h2, h3, h4, h5, h6 {
 .searching form button:hover {
     background-color: var(--bgSecondaryHover);
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
     div.searching {
         margin: 1.3rem auto;
         max-width: 52rem;
@@ -842,24 +842,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About Istana Presiden */
 .aboutContainer {
-    margin: 3rem 0;
+    margin: 2rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .sectionTitle {
     width: max-content;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    margin: 0 auto 1.5rem;
+    padding: .3rem;
     color: var(--generalTeks);
-    position: relative;
-}
-.sectionTitle::before {
-    
+    background-color: white;
 }
 .istanaCard-Container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: red; */
+    max-width: 1300px;
+}
+.istanaCard-Container .istanaCard:nth-of-type(n + 3) {
+    margin-top: 1.8rem;
 }
 .istanaCard {
     display: flex;
@@ -867,19 +870,23 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
     color: var(--generalTeks);
     box-shadow: var(--shadowCard);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 1rem;
     width: max-content;
     transition: 300ms ease;
 }
 .istanaTitle {
-    width: max-content;
+    display: flex;
     margin-bottom: .8rem;
+}
+.istanaTitle h3 {
+    font-size: 1.125rem;
+    position: relative;
+    width: max-content;
     padding-bottom: .2rem;
     border-bottom: 2px solid var(--bgPrimary);
-    position: relative;
 }
-.istanaTitle::before {
+.istanaTitle h3::before {
     content: '';
     position: absolute;
     left: 0;
@@ -889,7 +896,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--bgtertiary);
     transition: 300ms ease;
 }
-.istanaCard:hover .istanaTitle::before {
+.istanaCard:hover .istanaTitle h3::before {
     width: 100%;
 }
 .istanaCard:hover {
@@ -898,11 +905,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .istanaProfil {
     display: flex;
-    /* background-color: red;     */
-    /* align-items: center; */
 }
 .istanaThumb {
-    /* background-color: red; */
     max-width: 15rem;
     max-height: 9.625rem;
     overflow: hidden;
@@ -910,17 +914,42 @@ h1, h2, h3, h4, h5, h6 {
 .istanaThumb img {
     display: block;
     max-width: 100%;
+    border-radius: .5rem;
 }
 .istanaInfo {
     font-size: .875rem;
     margin-left: 1rem;
     max-width: 34ch;
-    /* background-color: red; */
 }
 .istanaInfo p {
     margin: 0;
     line-height: 1.2rem;
 }
+/* About Istana Presiden Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+    .sectionTitle {
+        margin-bottom: 0;
+    }
+    .istanaCard-Container .istanaCard {
+        margin-top: 1.5rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .istanaCard {
+        padding-bottom: .5rem;
+        width: clamp(18rem, 80vw, 20rem);
+    }   
+    .istanaProfil {
+        flex-direction: column;
+    }
+    .istanaThumb {
+        max-width: 100%;
+    }
+    .istanaInfo {
+        margin: 1rem 0;
+    }
+}        
+
 
 
 
