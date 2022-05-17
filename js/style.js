@@ -13,16 +13,6 @@ btnDropdown.forEach( elmnt => {
     });
 });
 
-// Search Icon Button
-const btnSearch = document.querySelector(".searchIcon input[type = 'checkbox']");
-const autoFocus = document.querySelector('.searching .searchInput');
-const searchInput = document.querySelector(".searching");
-btnSearch.addEventListener('change', () => {
-        searchInput.classList.toggle('active');
-        autoFocus.focus();
-    }
-);
-
 
 // Scroll To Top Button
 const stpBtn = document.querySelector('.stp-btn');

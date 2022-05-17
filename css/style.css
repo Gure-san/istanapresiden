@@ -92,9 +92,10 @@ h1, h2, h3, h4, h5, h6 {
 .stp-btn {
     position: fixed;
     bottom: 4rem;
-    right: 1.5rem;
-    width: 50px;
-    height: 50px;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    font-size: .75rem;
     background: linear-gradient(120deg, #bdf5dc, white) ;
     border-radius: 50%;
     display: flex;
@@ -114,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 .stp-btn.active {
     opacity: 1;
     visibility: visible;
-    bottom: 2rem;
+    bottom: 1rem;
 }
 
 
@@ -615,71 +616,47 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* Jumlah Artikel */
-.ja-container {
+/* Nav Sekunder */
+.navContainer {
+    padding: 1.5rem 0;
     width: 100%;
-    padding: 0 2rem;
-}
-.ja-container p {
+    max-width: max-content;
+    margin: .5rem auto 0;
     display: flex;
-    font-weight: bold;
+    justify-content: space-evenly;
+    overflow-x: auto;
 }
-.ja-num {
-    margin-left: 1rem;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 0 .3rem;
-}
-.ja-num::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
+.navList {
+    background-color: var(--bgPrimary);
+    color: var(--lighter);
+    font-size: .75rem;
+    padding: .5rem 1rem;
     border-radius: 1rem;
-    bottom: -.2rem;
-    background: #56c995;
+    cursor: pointer;
+    min-width: max-content;
 }
-@media screen and (max-width:632px) {
-    div.ja-container {
-        padding: 0;
+.navList span {
+    width: 100%;
+}
+.navList:not(:first-child) {
+    margin-left: 2rem;
+}
+@media screen and (max-width: 768px) {
+    .navContainer {
+        justify-content: flex-start;
+        max-width: 100%;
+        padding: 1rem 0 .8rem;
     }
-}
-
-
-
-/* Page Article Title */
-.pageTitle {
-        width: 100%;
-        height: 60px;
-        margin-bottom: 2rem;
-        display: flex;
-        overflow: hidden;
-        padding: 0 2rem;
-        position: relative;
-}
-.p-Title {
-        display: flex;
-        align-items: center;
-        background: url(../icons/dots-bg.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        padding: 0 1rem 0 0;
-        width: 100%;
-        height: 100%;
-}
-.p-Title h3 {
-        font-size: clamp(1.25rem, 2vw, 1.5rem);
-        color: var(--generalTeks);
-}
-.p-Title h3::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        margin: 0 1rem;
-        bottom: 50%;
-        background-color: var(--textMutedLinks);
+    .navContainer::-webkit-scrollbar {
+        height: .3rem;
+    }
+    .navContainer::-webkit-scrollbar-thumb {
+        background-color: var(--bgPrimary);
+        border-radius: 1rem;
+    }
+    .navList:not(:first-child) {
+        margin-left: 1rem;
+    }
 }
 
 
@@ -687,15 +664,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Searching */
 .searching {
     width: 100%;
-    max-width: 992px;
-    margin: 0rem auto 0rem;
-    opacity: 0;
-    transition: all 200ms;
-}
-.active {
+    max-width: 768px;
+    margin: 0 auto 1.5rem;
     opacity: 1;
-    margin: 2rem auto;
-    transition: all 200ms;
 }
 .searching form {
     display: flex;
@@ -731,11 +702,10 @@ h1, h2, h3, h4, h5, h6 {
 .searching form button:hover {
     background-color: var(--bgSecondaryHover);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
     div.searching {
-        margin: 1.3rem auto;
+        margin: 1.3rem auto 1.3rem;
         max-width: 52rem;
-        opacity: 1;
     }
 }
 
@@ -748,7 +718,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0rem 0 2rem;
+    margin: 0rem 0 0rem;
 }
 .costom-card-type1 {
     width: 100%;
@@ -842,7 +812,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About Istana Presiden */
 .aboutContainer {
-    margin: 2rem 0 3rem;
+    margin: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -935,6 +905,10 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 @media screen and (max-width: 768px) {
+    .aboutContainer {
+        margin: 3.5rem auto;
+        max-width: 698px;
+    }
     .istanaCard {
         padding-bottom: .5rem;
         width: clamp(18rem, 80vw, 20rem);
@@ -1022,6 +996,74 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/* Jumlah Artikel */
+.ja-container {
+    width: 100%;
+    padding: 0 2rem;
+}
+.ja-container p {
+    display: flex;
+    font-weight: bold;
+}
+.ja-num {
+    margin-left: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 .3rem;
+}
+.ja-num::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 1rem;
+    bottom: -.2rem;
+    background: #56c995;
+}
+@media screen and (max-width:632px) {
+    div.ja-container {
+        padding: 0;
+    }
+}
+
+
+
+/* Page Article Title */
+.pageTitle {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 2rem;
+    display: flex;
+    overflow: hidden;
+    padding: 0 2rem;
+    position: relative;
+}
+.p-Title {
+    display: flex;
+    align-items: center;
+    background: url(../icons/dots-bg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0 1rem 0 0;
+    width: 100%;
+    height: 100%;
+}
+.p-Title h3 {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    color: var(--generalTeks);
+}
+.p-Title h3::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    margin: 0 1rem;
+    bottom: 50%;
+    background-color: var(--textMutedLinks);
+}
+
+
 
 /* Costom card - 2 */
 .container-grid {
@@ -1043,7 +1085,7 @@ h1, h2, h3, h4, h5, h6 {
         height: max-content;
         position: relative;
         border-radius: .5rem;
-        box-shadow: 0 0 1rem #00000030;
+        box-shadow: var(--shadowCard);
 }
 .thumbnail-card {
     position: relative;
@@ -1080,14 +1122,14 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0;
         color: var(--generalTeks);
         text-decoration: none;
-        font-weight: 500;
-        font-size: 1.125rem;
+        font-weight: bold;
+        font-size: 1rem;
 }
 .footer-card {
     display: flex;
     width: 100%;
     align-items: center;
-    padding: 0rem 0 2rem 2rem;
+    padding: .5rem 0 2rem 2rem;
 }
 .footer-card .separator {
     margin: 0 .3rem;
@@ -1274,7 +1316,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 .footer-container {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 3rem;
     background-color: var(--bgPrimary);
     display: flex;
     justify-content: center;
