@@ -14,6 +14,12 @@ btnDropdown.forEach( elmnt => {
 });
 
 
+// Nav Sekunder
+const navSekunderContainer = document.querySelector('.navContainer');
+window.addEventListener('scroll', () => navSekunderContainer.classList.toggle('sticky', window.scrollY > 100)
+);
+
+
 // Scroll To Top Button
 const stpBtn = document.querySelector('.stp-btn');
 stpBtn.addEventListener('click', () => window.scrollTo({top:0}));

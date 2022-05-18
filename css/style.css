@@ -158,11 +158,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 2rem;
     list-style: none;
     align-items: center;
+    --fsLink: .8rem;
 }
 .navbar-nav .nav-item {
     width: max-content;
     margin-right: 1rem;
-    font-size: .9rem;
+    font-size: var(--fsLink);
 }
 .navbar-nav .nav-item .nav-link:hover {
     color: var(--lighter);
@@ -191,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     .navbar-nav:not(.login-reg) .nav-item > .nav-link {
         position: relative;
-        font-size: .9rem;
+        font-size: var(--fsLink);
     }
     .navbar-nav:not(.login-reg) .nav-item > .nav-link:hover::before {
         width: 100%;
@@ -250,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         box-sizing: border-box;
         padding: 1rem 2rem;
-        font-size: .9rem;
+        font-size: var(--fsLink);
         text-decoration: none;
         color: var(--textMutedLinks);
         transition: 300ms;
@@ -305,7 +306,7 @@ h1, h2, h3, h4, h5, h6 {
         cursor: pointer;
     }
     .user-valid-info > span {
-        font-size: .8rem;
+        font-size: var(--fsLink);
         color: var(--lighter);
         line-height: 0;
     }
@@ -385,7 +386,7 @@ h1, h2, h3, h4, h5, h6 {
         align-items: center;
         width: 120px;
         height: 40px;
-        font-size: .8rem;
+        font-size: var(--fsLink);
         transition: 300ms;
         line-height: 0;
         border-radius: .25rem;
@@ -621,10 +622,24 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5rem 0;
     width: 100%;
     max-width: max-content;
-    margin: .5rem auto 0;
+    margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
     overflow-x: auto;
+    transition: 300ms ease;
+}
+.navContainer.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    max-width: 100%;
+    justify-content: center;
+    box-shadow: var(--shadowCard);
+    padding: 1rem .5rem;
+    background-color: var(--lighter);
+    z-index: 99;
 }
 .navList {
     background-color: var(--bgPrimary);
@@ -639,13 +654,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
 }
 .navList:not(:first-child) {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 @media screen and (max-width: 768px) {
     .navContainer {
         justify-content: flex-start;
         max-width: 100%;
         padding: 1rem 0 .8rem;
+    }
+    .navContainer.sticky {
+        justify-content: flex-start;
     }
     .navContainer::-webkit-scrollbar {
         height: .3rem;
@@ -689,7 +707,7 @@ h1, h2, h3, h4, h5, h6 {
 .searching form button {
     outline: none;
     border: none;
-    background-color: var(--bgSecondary);
+    background-color: var(--bgPrimary);
     color: var(--lighter);
     cursor: pointer;
     line-height: 0;
@@ -697,10 +715,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: .75rem;
     width: 6.25rem;
     height: var(--heightChild);
-    transition: 300ms;
-}
-.searching form button:hover {
-    background-color: var(--bgSecondaryHover);
 }
 @media screen and (max-width: 768px) {
     div.searching {
@@ -1358,7 +1372,7 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
 }
 .info-media-profil > span {
-    font-size: .8rem;
+    font-size: .75rem;
     color: var(--textMutedLinks);
 }
 .links-media-footer {
@@ -1387,7 +1401,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 3rem;
 }
 .copyright-footer {
-    font-size: .8rem;
+    font-size: .75rem;
     color: var(--textMutedLinks);
     padding-top: 1rem;
 }
