@@ -20,6 +20,21 @@ window.addEventListener('scroll', () => navSekunderContainer.classList.toggle('s
 );
 
 
+// About Container 
+const aboutContainer = document.querySelector('.navContainer');
+const btnTentangIstana = document.querySelector(".navContainer .navList[data-navName='tentangIstana'");
+const positionY = 460;
+const positionX = aboutContainer.getBoundingClientRect().x;
+const positionWidth = aboutContainer.getBoundingClientRect().width;
+const positionHeight = aboutContainer.getBoundingClientRect().height;
+
+btnTentangIstana.addEventListener('click', () => {
+    window.scrollTo({ top: positionY, behavior: 'smooth' });
+});
+// console.group([positionY, positionX, positionWidth, positionHeight])
+
+
+
 // Scroll To Top Button
 const stpBtn = document.querySelector('.stp-btn');
 stpBtn.addEventListener('click', () => window.scrollTo({top:0}));
