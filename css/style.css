@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-/* Scroll To Top Button */
+/* Top Button */
 .stp-btn {
     position: fixed;
     bottom: 4rem;
@@ -723,6 +723,109 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
+
+/* Message */
+.messageContainer {
+    max-width: max-content;
+    margin: 2rem auto;
+    --bgMessage: #d6fcfc;
+}
+.messageContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--bgMessage);
+    box-shadow: var(--shadowCard);
+    color: var(--generalTeks);
+    padding: 2rem;
+    border-radius: .5rem;
+    position: relative;
+    opacity: 0;
+}
+.messageContent .header {
+    margin-bottom: .5rem;
+}
+.messageContent .body {
+    max-width: 75ch;
+    margin-bottom: .5rem;
+    font-size: .8rem;
+}
+.messageContent .body p {
+    margin: 0;
+}
+.messageContent .footer {
+    padding: 0;
+    color: var(--subTeks);
+    font-size: .75rem;
+}
+.messageContent .close {
+    position: absolute;
+    top: -.6rem;
+    right: -1rem;
+    padding: .5rem .8rem;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    width: max-content;
+    background-color: var(--bgMessage);
+    cursor: pointer;
+}
+.pinnedMessage {
+    position: fixed;
+    z-index: 99;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    transform: translateY(-3rem);
+    opacity: 0;
+    width: max-content;
+    transition: 500ms ease;
+}
+.pinnedMessage button {
+    font-size: .75rem;
+    outline: 0;
+    border: 2px solid var(--bgtertiary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: linear-gradient(120deg, #bdf5dc, white) ;
+    cursor: pointer;
+}
+.pinnedMessage.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+    /* Message Animation */
+    @keyframes msgAnimateOpen {
+        from {
+            opacity: 0;
+            transform: translateY(2rem);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes msgAnimateClose {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+    .messageContent[open] {
+        animation: msgAnimateOpen 500ms ease forwards;
+    }
+    .messageContent[closing] {
+        animation: msgAnimateClose 500ms ease forwards;
+    }
 
 
 /* Costom Card - 1 */
