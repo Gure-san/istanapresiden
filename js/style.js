@@ -29,23 +29,20 @@ window.addEventListener('scroll', () => stpBtn.classList.toggle('active', window
 
 // Close Message
 const checkMessage = localStorage.getItem('removeMessage');
-window.addEventListener('load', () => {
-    if( checkMessage ) {
+const checkStorage = ( item ) => {
+    if( item ) {
         document.querySelector('.messageContent').style.display = 'none';
         document.querySelector('.pinnedMessage').classList.add('active');
     }
-});
+}
+window.addEventListener('load', () => checkStorage);
 
 const clsMessageBtn = document.querySelector('.messageContent .close');
 const messageContent = document.querySelector('.messageContent');
 const removeMessage =  () => {
     localStorage.setItem('removeMessage', true);
     const checkMessage = localStorage.getItem('removeMessage');
-
-    if( checkMessage ) {
-        document.querySelector('.messageContent').style.display = 'none';
-        document.querySelector('.pinnedMessage').classList.add('active');
-    }
+    checkStorage( checkMessage );
 };
 
 clsMessageBtn.addEventListener('click', () => {
